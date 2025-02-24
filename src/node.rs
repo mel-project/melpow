@@ -60,7 +60,7 @@ impl Node {
     }
 
     pub fn uniqid(self) -> u64 {
-        (self.len << 56) as u64 | self.bv
+        (self.len as u64) << 56 | self.bv
     }
 
     pub fn to_bytes(self) -> [u8; 8] {
